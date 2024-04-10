@@ -1,8 +1,9 @@
+import Layout from "@components/Layout.jsx";
+
 export default function Projects() {
   return (
-    <section id="projects">
-      <h2>Projects</h2>
-      
-    </section>
-  )
+    <Layout id="projects" title={"Projects"}>
+      <div className="temp">프로젝트입니다.</div>
+    </Layout>
+  );
 }

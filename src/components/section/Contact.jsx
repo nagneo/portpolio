@@ -1,20 +1,21 @@
+import Layout from "@components/Layout";
+
 export default function Contact() {
   return (
-    <section id="contact">
-      <h2>Contact</h2>
+    <Layout id="contact" title={"Contact"}>
       <div>
         <img alt="profile image"></img>
         <ul>
           <li>
-            <img/>
+            <img />
             <div>Seoul, South Korea</div>
           </li>
           <li>
-            <img/>
+            <img />
             <a href="mailto:tosk3927@gmail.com">tosk3927@gmail.com</a>
           </li>
           <li>
-            <img/>
+            <img />
             <a href="tel:010-7731-6767">010-7731-6767</a>
           </li>
         </ul>
@@ -24,6 +25,6 @@ export default function Contact() {
           <div>LinkedIn</div>
         </div>
       </div>
-    </section>
-  )
+    </Layout>
+  );
 }

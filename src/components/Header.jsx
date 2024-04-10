@@ -35,7 +35,7 @@ export default function Header() {
               <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#about">Background</a>
+              <a href="#background">Background</a>
             </li>
             <li>
               <a href="#projects">Projects</a>
@@ -57,7 +57,6 @@ const headerStyle = css`
   width: 100%;
   height: var(--header-height);
   margin: auto 0;
-  z-index: var(--header-z-index);
   .header-content {
     height: 100%;
     display: flex;
@@ -66,7 +65,8 @@ const headerStyle = css`
     align-items: center;
     max-width: 1280px;
     margin: auto;
-    background-color: var(--dark-theme-background);
+    background-color: transparent;
+    z-index: var(--header-z-index);
   }
   .visible-element {
     opacity: 1;
