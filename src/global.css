@@ -1,0 +1,10 @@
+:root {
+  --light-theme-background: #ffffff;
+  --light-theme-color: #213547;
+
+  --dark-theme-background: #242424;
+  --dark-theme-color: rgba(255, 255, 255, 0.87);
+
+  --header-height: 80px;
+  --header-z-index: 10;
+}

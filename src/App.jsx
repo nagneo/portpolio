@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useRef } from "react";
+import "./App.css";
+import MainGate from "@/components/section/MainGate";
+import Header from "@/components/Header";
+import Skills from "@/components/section/Skills";
+import Background from "@/components/section/Background";
+import Projects from "@/components/section/Projects";
+import Contact from "@/components/section/Contact";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const firstContentRef = useRef(null);
+
+  const goToWorkContent = () => {
+    if (!firstContentRef?.current) {
+      return;
+    }
+
+    firstContentRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    console.log("App component mounted", firstContentRef.current);
+  }, [firstContentRef]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <MainGate goToWorkContent={goToWorkContent} />
+      <div ref={firstContentRef}>
+        <Skills />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Background />
+      <Projects />
+      <Contact />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
