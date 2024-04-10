@@ -6,6 +6,7 @@ import Skills from "@/components/section/Skills";
 import Background from "@/components/section/Background";
 import Projects from "@/components/section/Projects";
 import Contact from "@/components/section/Contact";
+import Cursor from "./components/Cursor";
 
 function App() {
   const firstContentRef = useRef(null);
@@ -32,6 +33,7 @@ function App() {
       <Background />
       <Projects />
       <Contact />
+      <Cursor />
     </>
   );
 }

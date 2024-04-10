@@ -56,7 +56,6 @@ const headerStyle = css`
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--dark-theme-background);
   margin: auto 0;
   z-index: var(--header-z-index);
   .header-content {
@@ -67,6 +66,7 @@ const headerStyle = css`
     align-items: center;
     max-width: 1280px;
     margin: auto;
+    background-color: var(--dark-theme-background);
   }
   .visible-element {
     opacity: 1;
